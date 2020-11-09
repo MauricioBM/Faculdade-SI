@@ -1,24 +1,23 @@
 from abc import ABCMeta, abstractmethod
 
-class ListaBase(object):
 
+class ListaBase(object):
     __metaclass__ = ABCMeta
 
-    def __init__(self):
-        self.first = None
-        self.last = None
-        self.size = 0
-        self.items = []
+    first = None
+    last = None
+    size = 0
+    items = []
 
     def is_empty(self):
-        return self._size == 0
+        return self.size == 0
 
     @abstractmethod
-    def insert(self, element = None):
+    def insert(self, element=None):
         pass
 
     def __len__(self):
-        return self._size
+        return self.size
 
     def items_is_empty(self):
         return self.__len__() == 0
@@ -30,7 +29,7 @@ class ListaBase(object):
             element = self.first
             data = element.data
             self.first = element.next
-            self._size = self._size - 1
+            self.size = self.size - 1
 
             del element
             return data
@@ -48,4 +47,4 @@ class ListaBase(object):
                 element = element.next
                 self.items.append(data)
 
-                return self.items
+            return self.items
