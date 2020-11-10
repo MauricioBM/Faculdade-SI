@@ -1,5 +1,4 @@
 def view(cls):
-
     operacao = -1
 
     while operacao != 0:
@@ -17,4 +16,5 @@ def view(cls):
         elif operacao == 2:
             print('Item {} foi removido.'.format(cls.remove()))
         elif operacao == 3:
-            print(cls.show())
+
+            print(cls.bubble_sort())

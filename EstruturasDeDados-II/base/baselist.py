@@ -34,6 +34,28 @@ class ListaBase(object):
             del element
             return data
 
+    def swap(self, data1, data2):
+
+        aux = data1
+        data1 = data2
+        data2 = aux
+
+        return data1, data2
+
+    def bubble_sort(self):
+
+        self.items = self.show()
+
+        for i in range(self.size - 1):
+            j = i + 1
+            while j < self.size:
+                if self.items[i] > self.items[j]:
+                    self.items[i], self.items[j] = self.swap(self.items[i], self.items[j])
+                j = j + 1
+            i = i + 1
+
+        return self.items
+
     def show(self):
         self.items = []
 
