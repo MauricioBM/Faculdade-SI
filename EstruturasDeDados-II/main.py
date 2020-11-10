@@ -2,7 +2,7 @@ operacao = -1
 while operacao != 0:
 
     title_option = 'Selecione o exercício que deseja executar: '
-    opcoes = '\n0 -Sair\n1 - Pilhas\n2- Fila\n\n'
+    opcoes = '\n0 -Sair\n1 - Pilha\n2- Fila\n\n'
     operacao = int(input('{} \n {} :'.format(title_option, opcoes)))
 
     if operacao == 0:
