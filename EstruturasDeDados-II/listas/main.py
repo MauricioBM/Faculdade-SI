@@ -1,8 +1,8 @@
 operacao = -1
 while operacao != 0:
 
-    title_option = '\nSelecione o exercício que deseja executar: '
-    opcoes = '\n0 -Sair\n1 - Pilha\n2 - Fila\n3 - Deque\n'
+    title_option = '\n\nSelecione o exercício que deseja executar: '
+    opcoes = '\n0 -Sair\n1 - Pilha\n2 - Fila\n3 - Deque\n4 - Árvore Binária\n'
     operacao = int(input('{} \n {} :'.format(title_option, opcoes)))
 
     if operacao == 0:
@@ -18,5 +18,9 @@ while operacao != 0:
         view()
     elif operacao == 3:
         from deque.test import test
+
+        test()
+    elif operacao == 4:
+        from binary_tree.test import test
 
         test()
