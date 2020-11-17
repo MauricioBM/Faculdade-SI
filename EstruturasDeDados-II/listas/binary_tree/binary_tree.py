@@ -2,6 +2,7 @@ from .Fila import Queue
 
 ROOT = "root"
 
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -10,6 +11,7 @@ class Node:
 
     def __str__(self):
         return str(self.data)
+
 
 class ArvoreBinariaDeBusca:
     def __init__(self, data=None, node=None):
@@ -30,7 +32,6 @@ class ArvoreBinariaDeBusca:
         if node.right:
             self.percurso_pos_ordem(node.right)
         print(node)
-
 
     def percurso_simetrico(self, node=None):
         if node is None:
@@ -96,7 +97,7 @@ class ArvoreBinariaDeBusca:
             node = self.root
 
         altura = self.mostrar_altura()
-        qtdNodes_ultNivel = 2**(altura - 1)
+        qtdNodes_ultNivel = 2 ** (altura - 1)
 
         qtdFolhas = self.contar_folhas()
 
@@ -105,7 +106,23 @@ class ArvoreBinariaDeBusca:
         else:
             return print("Esta árvore binária não é cheia !")
 
+    def invertTree(self, node=ROOT):
 
+        if node == ROOT:
+            node = self.root
+
+        queue = Queue()
+        queue.push(node)
+
+        while len(queue):
+            node = queue.pop()
+
+            if node:
+                node.left, node.right = node.right, node.left
+                queue.push(node.left)
+                queue.push(node.right)
+
+        return self.root
 
     def insert(self, value):
 
@@ -181,6 +198,3 @@ class ArvoreBinariaDeBusca:
                 node.right = self.remove(substituto, node.right)
 
         return node
-
-
-

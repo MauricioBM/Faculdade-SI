@@ -16,3 +16,10 @@ def test():
     print("\n--------------------------------------")
 
     bst.arvore_eh_cheia()
+
+    print("\n--------------------------------------")
+
+    bst.invertTree()
+
+    print("\n Árvore invertida: ")
+    bst.percurso_nivel()
