@@ -14,6 +14,7 @@ class Node:
 
 
 class ArvoreBinariaDeBusca:
+
     def __init__(self, data=None, node=None):
         if node:
             self.root = node
@@ -23,7 +24,6 @@ class ArvoreBinariaDeBusca:
         else:
             self.root = None
 
-    # Percurso em PÓS ORDEM em ÁRVORE BINÁRIA: https://youtu.be/QC8oiQnlYos
     def percurso_pos_ordem(self, node=None):
         if node is None:
             node = self.root
