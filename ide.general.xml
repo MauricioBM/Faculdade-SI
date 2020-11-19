@@ -2,4 +2,7 @@
   <component name="GeneralSettings">
     <option name="showTipsOnStartup" value="false" />
   </component>
+  <component name="Registry">
+    <entry key="vcs.annotations.preload" value="true" />
+  </component>
 </application>
