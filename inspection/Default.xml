@@ -14,6 +14,13 @@
         <option value="N801" />
       </list>
     </option>
+    <option name="ignoredBaseClasses">
+      <list>
+        <option value="unittest.TestCase" />
+        <option value="unittest.case.TestCase" />
+        <option value="object" />
+      </list>
+    </option>
   </inspection_tool>
   <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoredIdentifiers">
