@@ -114,16 +114,16 @@ class AVL_Tree(object):
         y = z.right
         T2 = y.left
 
-        # Perform rotation
+        # Realiza a rotação
         y.left = z
         z.right = T2
 
-        # Update heights
+        # Atualiza as alturas
         z.height = 1 + max(self.getAltura(z.left), self.getAltura(z.right))
 
         y.height = 1 + max(self.getAltura(y.left), self.getAltura(y.right))
 
-        # Return the new root
+        # Retorna o node que é a nova raiz
         return y
 
     def rightRotate(self, z):
@@ -131,16 +131,16 @@ class AVL_Tree(object):
         y = z.left
         T3 = y.right
 
-        # Perform rotation
+        # Realiza a rotação
         y.right = z
         z.left = T3
 
-        # Update heights
+        # Atualiza as alturas
         z.height = 1 + max(self.getAltura(z.left), self.getAltura(z.right))
 
         y.height = 1 + max(self.getAltura(y.left), self.getAltura(y.right))
 
-        # Return the new root
+        # Retorna o node que é a nova raiz
         return y
 
     def getAltura(self, root):
