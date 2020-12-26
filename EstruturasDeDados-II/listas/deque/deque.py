@@ -2,7 +2,15 @@ from .node import Node
 
 class DequeDinamico:
 
-    def __init__(self):
+    def __init__(self, data=None, node=None):
+        if node:
+            self.root = node
+        elif data:
+            node = Node(data)
+            self.root = node
+        else:
+            self.root = None
+
         self.first = None
         self.last = None
         self.size = 0
@@ -13,7 +21,7 @@ class DequeDinamico:
 
         if self.first is None:
             self.first = node
-            self.fim = node
+            self.last = node
         else:
             node.next = self.first
             self.first = node
@@ -59,6 +67,16 @@ class DequeDinamico:
             return print('Item {} removido, a fila andou !'.format(data))
         else:
             raise Exception('Lista Vazia!')
+
+    def remover_indice(self, indice):
+        if len(self.root) > 0:
+            elemento_removido = self.root[indice]
+
+            del self.root[indice]
+
+            return elemento_removido
+        
+        return False
 
     def get_first(self):
         return self.first
